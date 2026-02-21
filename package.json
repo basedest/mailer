@@ -1,6 +1,6 @@
 {
     "name": "@basedest/mailer",
-    "version": "0.0.0-development",
+    "version": "1.0.0",
     "description": "Mailer abstraction with Resend, retry, and rate-limiting support",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
