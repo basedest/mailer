@@ -1,0 +1,62 @@
+{
+    "name": "@basedest/mailer",
+    "version": "1.0.0",
+    "description": "Mailer abstraction with Resend, retry, and rate-limiting support",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "default": "./dist/index.js"
+        }
+    },
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "tsc",
+        "type-check": "tsc --noEmit",
+        "lint": "eslint .",
+        "lint:fix": "eslint . --fix",
+        "prepare": "husky"
+    },
+    "lint-staged": {
+        "*.{json,md}": [
+            "prettier --write"
+        ],
+        "*.ts": [
+            "eslint --fix"
+        ]
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "packageManager": "pnpm@10.28.2",
+    "dependencies": {
+        "resend": "^6.9.1"
+    },
+    "peerDependencies": {
+        "react": ">=18.0.0"
+    },
+    "peerDependenciesMeta": {
+        "react": {
+            "optional": true
+        }
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^20.4.0",
+        "@commitlint/config-conventional": "^20.4.0",
+        "@eslint/js": "^9.39.2",
+        "@types/node": "^22.0.0",
+        "@types/react": "^19.0.0",
+        "@typescript-eslint/eslint-plugin": "^8.54.0",
+        "@typescript-eslint/parser": "^8.54.0",
+        "eslint": "^9.39.2",
+        "eslint-config-prettier": "^10.1.8",
+        "eslint-plugin-prettier": "^5.5.0",
+        "husky": "^9.0.0",
+        "lint-staged": "^16.2.7",
+        "prettier": "^3.8.1",
+        "typescript": "^5.9.3"
+    }
+}
