@@ -1,6 +1,6 @@
 {
     "name": "@basedest/mailer",
-    "version": "1.0.0",
+    "version": "0.0.0-development",
     "description": "Mailer abstraction with Resend, retry, and rate-limiting support",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
@@ -13,12 +13,17 @@
     "files": [
         "dist"
     ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/basedest/mailer.git"
+    },
     "scripts": {
         "build": "tsc",
         "type-check": "tsc --noEmit",
         "lint": "eslint .",
         "lint:fix": "eslint . --fix",
-        "prepare": "husky"
+        "prepare": "husky",
+        "semantic-release": "semantic-release"
     },
     "lint-staged": {
         "*.{json,md}": [
@@ -29,9 +34,13 @@
         ]
     },
     "keywords": [],
-    "author": "",
+    "author": "basedest <basedest@icloud.com>",
     "license": "ISC",
     "packageManager": "pnpm@10.28.2",
+    "publishConfig": {
+        "access": "public",
+        "provenance": true
+    },
     "dependencies": {
         "resend": "^6.9.1"
     },
@@ -46,6 +55,11 @@
     "devDependencies": {
         "@commitlint/cli": "^20.4.0",
         "@commitlint/config-conventional": "^20.4.0",
+        "@semantic-release/commit-analyzer": "^13.0.1",
+        "@semantic-release/git": "^10.0.1",
+        "@semantic-release/github": "^12.0.3",
+        "@semantic-release/npm": "^12.0.1",
+        "@semantic-release/release-notes-generator": "^14.1.0",
         "@eslint/js": "^9.39.2",
         "@types/node": "^22.0.0",
         "@types/react": "^19.0.0",
@@ -57,6 +71,7 @@
         "husky": "^9.0.0",
         "lint-staged": "^16.2.7",
         "prettier": "^3.8.1",
+        "semantic-release": "^25.0.3",
         "typescript": "^5.9.3"
     }
 }
