@@ -37,6 +37,11 @@
     "author": "basedest <basedest@icloud.com>",
     "license": "ISC",
     "packageManager": "pnpm@10.28.2",
+    "pnpm": {
+        "overrides": {
+            "minimatch": ">=10.2.1"
+        }
+    },
     "publishConfig": {
         "access": "public",
         "provenance": true
