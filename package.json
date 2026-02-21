@@ -44,7 +44,8 @@
     },
     "publishConfig": {
         "access": "public",
-        "provenance": true
+        "provenance": true,
+        "registry": "https://npm.pkg.github.com"
     },
     "dependencies": {
         "resend": "^6.9.1"
