@@ -34,6 +34,9 @@ jobs:
 
             - run: pnpm install --frozen-lockfile
 
+            - name: Configure GitHub Packages auth
+              run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> ~/.npmrc
+
             - run: pnpm build
 
             - run: pnpm audit signatures
